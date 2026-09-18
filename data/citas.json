@@ -1,0 +1,20 @@
+[
+    {
+        "id_cita": "CTI-4824-94",
+        "paciente": "Pepe",
+        "especialidad": "Odontologia",
+        "medico_asignado": "Juan",
+        "costo_consulta": 19391.0,
+        "es_urgencia": true,
+        "costo_final": 19391.0
+    },
+    {
+        "id_cita": "CQL-3813-2",
+        "paciente": "Andres Lopez",
+        "especialidad": "Medicina General",
+        "medico_asignado": "Luis",
+        "costo_consulta": 67000.0,
+        "es_urgencia": false,
+        "costo_final": 56950.0
+    }
+]
