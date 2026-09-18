@@ -1,6 +1,7 @@
 from src.cita import CitaMedica
 from src.gestion_datos import cargar_citas, guardar_citas
 
+
 def mostrar_menu():
     print("\n--- SISTEMA DE GESTIÓN DE CITAS MEDISENA ---")
     print("1. Listar citas")
@@ -44,7 +45,7 @@ def main():
                 continue
 
             urgencia_input = input("¿Es una urgencia? (s/n): ").strip().lower()
-            es_urgencia = True if urgencia_input == 's' else False
+            es_urgencia = urgencia_input == 's'
 
             nueva_cita = CitaMedica(id_cita, paciente, especialidad, medico_asignado, costo_consulta, es_urgencia)
             citas_guardadas.append(nueva_cita.a_diccionario())
@@ -53,7 +54,7 @@ def main():
 
         elif opcion == "3":
             total_ingresos = sum(c["costo_final"] for c in citas_guardadas)
-            print(f"\n--- INGRESOS PROYECTADOS ---")
+            print("\n--- INGRESOS PROYECTADOS ---")
             print(f"El total de ingresos proyectados es: ${total_ingresos:.2f}")
 
         elif opcion == "4":
